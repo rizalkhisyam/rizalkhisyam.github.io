@@ -3,5 +3,5 @@
 
 Tema : E-Commerce
 
-Muhammad Rizal Khisyam Amamy
+Muhammad Rizal Khisyam Amamy &
 Rahmad Ageng Pambudi
