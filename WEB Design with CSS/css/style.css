@@ -163,5 +163,72 @@ ul#menu li a{
 }
 
 .designer{
+    width: 100%;
+    height: 500px;
+}
+.designer .up{
+        font-family: 'Lora';
+        font-weight: bold;
+        font-size: 20px;
+        color: #7A5AE8;
+        margin-left: 180px;
+        display: flex;
+}
+
+.designer .down{
+     font-size: 14px;
+     color: #BBB1B1;
+     margin-left: 180px;
+     margin-top: -20px;
+}
+
+.person{
+margin-top: 40px;
+margin-left: 120px;
+
+}
+.person .ds{
+    text-align: center;
+    width: 260px;
+    height: 217px;
+    float: left;
+    margin-left: 10px;
+}
+
+.footer{
+   
+    width: 100%;
+    height: 200px;
+
+}
+
+.footer .ft-logo{
+    margin-left: 180px;
+}
+
+.footer .ft-logo p{
+    font-size: 14px;
+    color:#BBB1B1;
+}
+
+.sosmed{
+    margin-left: 1070px;
+    margin-top: -90px;
+    width: 160px;
+    height: 30px;
+}
+
+.footer .sosmed-item{
+    margin-right: 10px;
+    width: 29px;
+    height: 29px;
+    float: left;
     
+}
+
+.ft-jobs a{
+    padding: 20px;
+    color: #707070;
+    margin-left: 810px;
+    text-decoration: none;
 }
