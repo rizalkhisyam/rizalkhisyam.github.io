@@ -1,0 +1,292 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Montserrat';
+}
+
+.nav {
+    height: 80px;
+    width: 100%;
+    background-color: hsl(0, 0%, 9%);
+    position: relative;
+    border-bottom: 1px solid #333333;
+}
+
+.nav .nav-title{
+    margin-left: 15%;
+    margin-bottom: -40px;
+}
+
+.nav .nav-title a{
+    
+}
+
+.nav .logo{
+    margin-right: 15%;
+}
+.nav .cart{
+    float: right;
+    margin-right: 15%;
+    margin-top: 5px;
+    
+}
+
+.nav .cart a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav .nav-header {
+   
+}
+
+.nav .nav-btn {
+    display: none;
+}
+
+.nav .nav-links {
+    display: inline;
+    margin-left: 30%;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.nav .nav-links a{
+    display: inline-block;
+    text-align: center;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+}
+
+.nav .nav-links a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav #nav-check {
+    display: none;
+}
+
+@media (max-width:600px) {
+    .nav .nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    .nav .nav-btn label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+
+    .nav .nav-btn label:hover,
+    .nav #nav-check:checked~.nav-btn label {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .nav .nav-btn label span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee;
+    }
+
+    .nav .nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #333;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 80px;
+        left: 0px;
+    }
+
+    .nav .nav-links a {
+        display: block;
+        width: 100%;
+    }
+
+    .nav #nav-check:not(:checked)~.nav-links {
+        height: 0px;
+    }
+
+    .nav #nav-check:checked~.nav-links {
+        height: 450px;
+        overflow-y: auto;
+    }
+
+    /* Carousel */
+    
+}
+.carousel {
+    width: 100%;
+    height: 450px;
+    background-color: #171717;
+    display: flex;
+}
+
+.carousel .content{
+    width: 40%;
+    margin-left: 20%;
+    margin-top: 15px;
+    font-family: 'Lora';
+    font-size: 60px;
+    color: white;
+}
+
+.carousel .content .a{
+    margin-top: -50px;
+    font-size: 20px;
+    width: 50%;
+}
+
+.carousel .btn-carousel{
+    font-size: 30px;
+    color: white;
+    width: 244px;
+    height: 63px;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #F9B234;
+}
+
+.carousel .foto{
+    margin-top: 50px;
+    margin-right: 25%;
+}
+
+/* Brand */
+.brand {
+    display: inline;
+    text-align: center;
+}
+
+.brand-position {
+    display: inline-flex;
+    text-decoration: none;
+    color: white;
+    margin-left: 10%;
+    margin-top: 40px;
+}
+
+.bg-product {
+    width: 100%;
+    height: 416px;
+    margin-top: 40px;
+    background-color: #FBF4F4;
+}
+
+.bg-product .up {
+    font-family: 'Lora';
+    font-weight: bold;
+    font-size: 20px;
+    color: #7A5AE8;
+    margin-left: 10%;
+    display: flex;
+}
+
+.bg-product .down {
+    font-size: 14px;
+    color: #BBB1B1;
+    margin-left: 10%;
+    margin-top: -20px;
+}
+
+.item-product {
+    text-align: center;
+    margin-left: 10%;
+}
+
+.product-1 {
+    width: 70%px;
+    height: 240px;
+    float: left;
+    padding: 10px;
+}
+
+/* designer */
+.designer {
+    width: 100%;
+    height: 500px;
+}
+
+.designer .up {
+    font-family: 'Lora';
+    font-weight: bold;
+    font-size: 20px;
+    color: #7A5AE8;
+    margin-left: 10%;
+    display: flex;
+}
+
+.designer .down {
+    font-size: 14px;
+    color: #BBB1B1;
+    margin-left: 10%;
+    margin-top: -20px;
+}
+
+.person {
+    margin-top: 40px;
+    margin-left: 10%;
+
+}
+
+.person .ds {
+    text-align: center;
+    width: 260px;
+    height: 217px;
+    float: left;
+    margin-left: 10px;
+}
+
+/* footer */
+.footer {
+    border-top: 1px solid #333333;
+    width: 100%;
+    height: 200px;
+
+}
+
+.footer .ft-logo {
+    margin-left: 10%;
+}
+
+.footer .ft-logo p {
+    font-size: 14px;
+    color: #BBB1B1;
+}
+
+.sosmed {
+    float: right;
+    margin-right: 7%;
+    margin-top: -90px;
+    width: 160px;
+    height: 30px;
+}
+
+.footer .sosmed-item {
+    margin-right: 10px;
+    width: 29px;
+    height: 29px;
+    float: left;
+
+}
+
+.ft-jobs a {
+    padding: 20px;
+    color: #707070;
+    float: right;
+    margin-top: -50px;
+    margin-bottom: 50px;
+    margin-right: 10%;
+    text-decoration: none;
+}
