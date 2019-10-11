@@ -1,135 +1,88 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
-    margin: 0px;
+    margin: 0;
     font-family: 'Montserrat';
 }
 
-.nav {
-    height: 80px;
-    width: 100%;
-    background-color: hsl(0, 0%, 9%);
-    position: relative;
-    border-bottom: 1px solid #333333;
-}
-
-.nav .nav-title{
- 
-    margin-left: 10%;
-    margin-bottom: -40px;
-}
-
-.nav .nav-title a{
-    
-}
-
-.nav .logo{
-    
-    margin-right: 15%;
-}
-.nav .cart{
-    float: right;
-    margin-right: 10%;
-    margin-top: 5px;
-    
-}
-
-.nav .cart a{
+#rc_logo {
+    left: 30px;
+    padding: 22px;
+    position: absolute;
+    color: #F9B234;
+    font-size: 19px;
+    font-family: Poppins;
     text-decoration: none;
-    color: white;
 }
 
-.nav .nav-header {
-   
+.nav_right {
+    margin-top: -10px;
+    right: 30px;
+    padding: 22px;
+    position: absolute;
+    color: #fff;
+    font-size: 19px;
+    font-family: Poppins;
+    text-decoration: none;
 }
 
-.nav .nav-btn {
-    display: none;
-}
-
-.nav .nav-links {
-    display: inline;
-    margin-left: 30%;
-    font-size: 20px;
-    text-transform: uppercase;
-}
-
-.nav .nav-links a{
-    display: inline-block;
+#rc_logo a {
+    color: inherit;
+    margin-bottom: 10px;
+    text-decoration: none;
     text-align: center;
-    justify-content: center;
-    
-    padding: 13px 10px 13px 10px;
+    font-family: 'HolidayFree';
+}
+
+.rc_nav {
+    overflow: hidden;
+    background-color: #171717;
+    text-align: center;
+    border-bottom: 1px solid #333333;
+    z-index: 6;
+}
+
+.rc_nav a {
+    display: inline-block;
+    margin-right: -4px;
+    /* inline-block gap fix */
+    color: #fff;
+    padding: 22px 22px;
     text-decoration: none;
-    color: #efefef;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    z-index: 9;
+
+    font-weight: 200;
 }
 
-.nav .nav-links a:hover {
-    background-color: rgba(0, 0, 0, 0.3);
+.rc_nav a:hover {
+    /* background-color: #575b69;
+        color: #bdfe0e2; */
 }
 
-.nav #nav-check {
+.rc_nav .icon {
     display: none;
 }
 
-@media (max-width:600px) {
-    .nav .nav-btn {
-        display: inline-block;
-        position: absolute;
-        right: 0px;
-        top: 0px;
-    }
-
-    .nav .nav-btn label {
-        display: inline-block;
-        width: 50px;
-        height: 50px;
-        padding: 13px;
-    }
-
-    .nav .nav-btn label:hover,
-    .nav #nav-check:checked~.nav-btn label {
-        background-color: rgba(0, 0, 0, 0.3);
-    }
-
-    .nav .nav-btn label span {
-        display: block;
-        width: 25px;
-        height: 10px;
-        border-top: 2px solid #eee;
-    }
-
-    .nav .nav-links {
-        position: absolute;
-        display: block;
-        width: 100%;
-        background-color: #333;
-        height: 0px;
-        transition: all 0.3s ease-in;
-        overflow-y: hidden;
-        top: 80px;
-        left: 0px;
-    }
-
-    .nav .nav-links a {
-        display: block;
-        width: 100%;
-    }
-
-    .nav #nav-check:not(:checked)~.nav-links {
-        height: 0px;
-    }
-
-    .nav #nav-check:checked~.nav-links {
-        height: 450px;
-        overflow-y: auto;
-    }
-
-    /* Carousel */
-    
+.rc_content {
+    text-align: center;
+    padding-left: 14px;
+    margin-top: 100px;
+    color: #8e909b;
 }
+
+.container2 {
+    text-align: center;
+    padding-left: 14px;
+    margin-top: 40px;
+    color: #8e909b;
+}
+
+.container3 {
+    text-align: center;
+    padding-left: 14px;
+    margin-top: 40px;
+}
+
 .carousel {
     width: 100%;
     height: 450px;
@@ -137,7 +90,7 @@ body {
     display: flex;
 }
 
-.carousel .content{
+.carousel .content {
     width: 40%;
     margin-left: 20%;
     margin-top: 15px;
@@ -146,28 +99,28 @@ body {
     color: white;
 }
 
-.carousel .content .a{
+.carousel .content .a {
     margin-top: -50px;
     font-size: 20px;
     width: 50%;
 }
 
-.carousel .btn-carousel{
+.carousel .btn-carousel {
     font-size: 30px;
     color: white;
     width: 244px;
-    height: 63px;
+    height: 40px;
     border-radius: 4px;
     text-align: center;
     background-color: #F9B234;
 }
 
-.carousel .foto{
+.carousel .foto {
     margin-top: 50px;
     margin-right: 25%;
 }
 
-/* Brand */
+
 .brand {
     display: inline;
     text-align: center;
@@ -202,6 +155,7 @@ body {
     color: #BBB1B1;
     margin-left: 10%;
     margin-top: -20px;
+    display: flex;
 }
 
 .item-product {
@@ -216,7 +170,6 @@ body {
     padding: 10px;
 }
 
-/* designer */
 .designer {
     width: 100%;
     height: 500px;
@@ -236,7 +189,9 @@ body {
     color: #BBB1B1;
     margin-left: 10%;
     margin-top: -20px;
+    display: flex;
 }
+
 
 .person {
     margin-top: 40px;
@@ -252,9 +207,8 @@ body {
     margin-left: 10px;
 }
 
-/* footer */
 .footer {
-    border-top: 1px solid #333333;
+    border-top: 1px solid gainsboro;
     width: 100%;
     height: 200px;
 
@@ -293,4 +247,44 @@ body {
     margin-bottom: 50px;
     margin-right: 10%;
     text-decoration: none;
+}
+
+@media screen and (max-width: 820px) {
+    .rc_nav a {
+        display: none;
+    }
+
+    .carousel .foto {
+        display: none;
+    }
+
+    .carousel .btn-carousel {
+        display: none;
+    }
+
+    .rc_nav a.icon {
+        float: right;
+        display: block;
+        width: 60px;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .rc_nav.responsive {
+        position: relative;
+        top: 73px;
+    }
+
+    .rc_nav.responsive .icon {
+        position: fixed;
+        right: 0;
+        top: 0;
+    }
+
+    .rc_nav.responsive a {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+
 }
