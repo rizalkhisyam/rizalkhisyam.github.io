@@ -16,7 +16,7 @@ body {
 }
 
 .nav .nav-title{
-    margin-left: 15%;
+    margin-left: 10%;
     margin-bottom: -40px;
 }
 
@@ -25,11 +25,12 @@ body {
 }
 
 .nav .logo{
+    
     margin-right: 15%;
 }
 .nav .cart{
     float: right;
-    margin-right: 15%;
+    margin-right: 10%;
     margin-top: 5px;
     
 }
@@ -57,6 +58,8 @@ body {
 .nav .nav-links a{
     display: inline-block;
     text-align: center;
+    justify-content: center;
+    
     padding: 13px 10px 13px 10px;
     text-decoration: none;
     color: #efefef;
