@@ -43,20 +43,17 @@ body {
 .rc_nav a {
     display: inline-block;
     margin-right: -4px;
-    /* inline-block gap fix */
     color: #fff;
     padding: 22px 22px;
     text-decoration: none;
     font-family: 'Montserrat';
     font-size: 18px;
     z-index: 9;
-
     font-weight: 200;
 }
 
 .rc_nav a:hover {
-    /* background-color: #575b69;
-        color: #bdfe0e2; */
+    color: #707070;
 }
 
 .rc_nav .icon {
