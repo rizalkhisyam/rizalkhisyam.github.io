@@ -42,6 +42,15 @@
         border-radius: 4px;
         box-sizing: border-box;
         }
+        input[type=password], select {
+        width: 30%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        }
 
         .address{
         margin-left: 10%;
@@ -100,12 +109,14 @@
     <div class="login">
         <img src="img/user.png" alt="">
         <h3>Sign In</h3>
-        <form action="" class="form">
+        <form action="berandaV2.html" class="form" id="login" name="login">
             <label for="email">E-mail</label> <br>
-            <input type="text" placeholder="Email Anda" required name="email"><br>
+            <input type="text" id="email" placeholder="Email Anda" required name="email"><br>
             <label for="password">Password</label> <br>
-            <input type="text" placeholder="Password" required name="password"><br><br>
-            <button class="btn-log">Sign In</button>
+            <input type="password" id="password" placeholder="Password" required name="password"><br><br>
+            <button class="btn-log" type="submit"
+                onclick="if(document.forms['login'].checkValidity()){event.preventDefault();document.forms['login'].submit();}else{event.preventDefault();alert('Mohon periksa kembali isian');}">Sign
+                In</button>
         </form>
     </div>
     <br><br><br>
@@ -150,6 +161,23 @@
             } else {
                 x.className = "rc_nav";
             }
+        }
+
+        function alertAction() {
+        alert("Silahkan Login Atau Sign Up Terlebih Dahulu");
+        }
+
+        function validate() {
+        event.preventDefault();
+        console.log('tes');
+        var email = document.forms["login"]["email"].value;
+        var pass = document.forms["login"]["password"].value;
+        if (uname == "" || pass == "") {
+        event.preventDefault();
+        alert('Data kosong\nmohon periksa kembali isian');
+        } else {
+        alert('Login');
+        }
         }
     </script>
 </body>

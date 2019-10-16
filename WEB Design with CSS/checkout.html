@@ -92,7 +92,7 @@
 <div class="flex-container text">
     <div>
         <ul class="breadcrumb">
-            <li><a href="#" style="font-weight: bold;">Home</a></li>
+            <li><a href="berandaV2.html" style="font-weight: bold;">Home</a></li>
             <li style="color : gray;">Cart</li>
         </ul>
     </div>
@@ -201,23 +201,24 @@
 <div class="address">
     <p>Your Address</p>
 </div><br><br>
-<form action="" class="form">
+<form action="checkout_cart.html" class="form" name="data">
     Name <br>
-    <input type="text" placeholder="Nama Lengkap Anda" required><br>
+    <input type="text" placeholder="Nama Lengkap Anda" required name="nama"><br>
     E-mail <br>
-    <input type="text" placeholder="Email Anda" required><br>
+    <input type="text" placeholder="Email Anda" required name="email"><br>
     Address <br>
-    <input type="text" placeholder="Alamat Lengkap" required><br>
+    <input type="text" placeholder="Alamat Lengkap" required name="alamat1"><br>
     Address II <br>
-    <input type="text" placeholder="Alamat Lengkap" required><br>
+    <input type="text" placeholder="Alamat Lengkap" required name="alamat2"><br>
     City <br>
-    <input type="text" placeholder="Kota" required><br>
+    <input type="text" placeholder="Kota" required name="kota"><br>
     Country <br>
-    <input type="text" placeholder="Negara" required><br>
+    <input type="text" placeholder="Negara" required name="negara"><br>
     Phone Number <br>
-    <input type="text" placeholder="Nomor Telepon Anda" required><br><br>
-    <button class="btn-cancel">Cancel</button>
-    <button class="btn-check">Checkout</button>
+    <input type="text" placeholder="Nomor Telepon Anda" required name="telp"><br><br>
+    <button class="btn-cancel" onclick="window.location.href = 'berandaV2.html';">Cancel</button>
+    <button class="btn-check"
+        onclick="if(document.forms['data'].checkValidity()){event.preventDefault();document.forms['data'].submit();}else{event.preventDefault();alert('Mohon periksa kembali isian');}">Checkout</button>
 </form>
 <br><br><br><br><br><br><br><br>
 
@@ -255,5 +256,28 @@
 </div>
 
 <script src="js/all.js"></script>
+<script>
+    function alertAction() {
+    alert("Lengkapi Data Terlebih dahulu");
+    }
+
+    function validate() {
+    event.preventDefault();
+    console.log('tes');
+    var nama = document.forms["data"]["nama"].value;
+    var email = document.forms["data"]["email"].value;
+    var alamat1 = document.forms["data"]["alamat1"].value;
+    var alamat2 = document.forms["data"]["alamat2"].value;
+    var kota = document.forms["data"]["kota"].value;
+    var negara = document.forms["data"]["negara"].value;
+    var telp = document.forms["data"]["telp"].value;
+    if (nama == "" || email == "" || alamat1 =="" || alamat2 =="" ||  kota =="" || negara=="" || telp=="") {
+    event.preventDefault();
+    alert('Data kosong\nmohon periksa kembali isian');
+    } else {
+    alert('Data');
+    }
+    }
+</script>
 </body>
 </html>
