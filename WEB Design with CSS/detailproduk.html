@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/new_style.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/single_style.css">
+    <title>HypeKoyang Store</title>
+    <link rel="shortcut icon" href="img/Group 26.png">
+</head>
+<body>
+
+    <div id="rc_logo">
+        <a href="#home" title="Logo">HypeKoyang.com</a>
+    </div>
+
+    <div class="rc_nav" id="centered_nav">
+        <a href="berandaV2.html" style="text-transform: uppercase; color: #F9B234; font-weight: bold;" title="Home">Home</a>
+        <a href="category.html" style="text-transform: uppercase;" title="Services">category</a>
+        <a href="designer.html" style="text-transform: uppercase;" title="About">Designer</a>
+        <a href="#contact" style="text-transform: uppercase;" title="Contact">about</a>
+        <a href="checkout.html" title="Logo" class="nav_right"> <img src="img/Group 14.png" alt="">My Cart</a>
+        <a href="javascript:void(0);" title="Menu" style="font-size:18px;" class="icon"
+            onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <div class="flex-container text">
+        <div>
+            <ul class="breadcrumb">
+                <li><a href="#" style="font-weight: bold;">Home</a></li>
+                <li style="color : gray;">Single Product</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="flex-container product">
+        <div class="p1">
+            <figure>
+                <img src="img/jordan1.png" alt="">
+                <figcaption>
+                    <a href="">
+                        <img src="img/jordan.png" alt="">
+                    </a>
+                    <a href="">
+                        <img src="img/jordan2.png" alt="">
+                    </a>
+                    <a href="">
+                        <img src="img/jordan3.png" alt="">
+                    </a>
+                    <a href="">
+                        <img src="img/jordan4.png" alt="">
+                    </a>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="capt">
+            <h3>Shoes : Nike Air Jordan 1</h3>
+            <p>IDR. 1.450.000</p>
+            <div class="btnn">
+            <button class="btn" style="background-color: #BBB1B1;"><i class="fas fa-minus-circle"></i></button>
+            <span >
+                2
+            </span>
+                <button class="btn" style="background-color: gray;"><i class="fas fa-plus-circle"></i></button>
+            </div>
+            <div class="btn-group">
+                <button class="btn1">Add To Cart</button>
+            </div>
+            <div class="btn-group2">
+                <button class="btn2">Add To Wishlist</button>
+            </div>
+            <div class="line">
+                <img src="img/design1.PNG">
+            </div>
+        </div>
+    </div>
+
+    <div class="comment">
+        <div class="ab">
+                <p>Description</p>
+        </div>
+        <div class="ac">
+            <a href="">
+                <p>Review</p>
+            </a>
+        </div>
+        <div class="card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione consequatur doloremque alias, et facere id aliquam quis illo provident magni velit ad sunt rem tempora commodi soluta ex quas quidem.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, consectetur beatae ab culpa nihil atque repellat et quas cumque, debitis nulla commodi sequi soluta esse excepturi dignissimos. Doloremque, dolorum repudiandae!
+            </p>
+        </div>
+    </div>
+
+    <div class="t">
+        <p class="up">Similar Product</p>
+        <div class="down">
+            <p style="" class="ab">Produk yang cocok dengan item tersebut</p>
+        </div>
+    </div>
+    <div class="flex-produk">
+        <div class="a">
+            <a href=""><img src="img/nike1.png" alt=""></a>
+            <p>Nike <font style="float: right; color: gray;">IDR. 1.300.000</font></p>
+        </div>
+        <div class="a">
+            <a href=""><img src="img/nike1.png" alt=""></a>
+            <p>Nike <font style="float: right; color: gray;">IDR. 1.300.000</font>
+            </p>
+        </div>
+        <div class="a">
+            <a href=""><img src="img/nike1.png" alt=""></a>
+            <p>Nike <font style="float: right; color: gray;">IDR. 1.300.000</font>
+            </p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="ft-logo">
+            <a href="">
+                <br><br>
+                <img src="img/Group 26.png" alt="">
+            </a>
+            <p>All right reserved by HypeKoyang Store 2019.</p>
+        </div>
+        <div class="sosmed">
+            <div class="sosmed-item">
+                <a href="">
+                    <img src="img/facebook.png" alt="">
+                </a>
+            </div>
+            <div class="sosmed-item">
+                <a href="">
+                    <img src="img/twitter.png" alt="">
+                </a>
+            </div>
+            <div class="sosmed-item">
+                <a href="">
+                    <img src="img/instagram.png" alt="">
+                </a>
+            </div>
+
+        </div>
+        <div class="ft-jobs">
+            <br>
+            <a href="">JOBS <font style="color:blue;">DEVELOPER</font> TERMS PRIVACY POLICY</a>
+        </div>
+    </div>
+
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("centered_nav");
+            if (x.className === "rc_nav") {
+                x.className += " responsive";
+            } else {
+                x.className = "rc_nav";
+            }
+        }
+    </script>
+    <script src="js/all.js"></script>
+</body>
+</html>
