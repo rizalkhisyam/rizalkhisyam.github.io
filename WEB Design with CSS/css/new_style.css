@@ -264,6 +264,9 @@ body {
         display: block;
         width: 60px;
     }
+    .lg img{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 820px) {
