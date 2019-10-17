@@ -91,8 +91,8 @@
             <a href="#desain" style="text-transform: uppercase;" title="About">Designer</a>
             <a href="#about" style="text-transform: uppercase;" title="Contact">about</a>
 
-            <a href="checkout.html" title="Logo" class="n_r">Sign Up</a>
-            <a href="checkout.html" title="Logo" class="n_r">Sign In</a>
+            <a href="#" title="Logo" class="n_r">Sign Up</a>
+            <a href="login.html" title="Logo" class="n_r">Sign In</a>
 
             <a href="javascript:void(0);" title="Menu" style="font-size:18px;" class="icon"
                 onclick="myFunction()">&#9776;</a>
@@ -104,14 +104,15 @@
     <div class="login">
         <img src="img/user.png" alt="">
         <h3>Sign Up</h3>
-        <form action="" class="form">
+        <form action="login.html" class="form" name="login">
             <label for="email">Nama</label> <br>
-            <input type="text" placeholder="Nama Lengkap Anda" required name="email"><br>
+            <input type="text" placeholder="Nama Lengkap Anda" required name="nama"><br>
             <label for="email">E-mail</label> <br>
             <input type="text" placeholder="Email Anda" required name="email"><br>
             <label for="password">Password</label> <br>
             <input type="text" placeholder="Password" required name="password"><br><br>
-            <button class="btn-log">Register</button>
+            <button class="btn-log"
+                onclick="if(document.forms['login'].checkValidity()){event.preventDefault();document.forms['login'].submit();}else{event.preventDefault();alert('Mohon periksa kembali isian');}">Register</button>
         </form>
     </div>
     <br><br><br>
@@ -155,6 +156,24 @@
                 x.className += " responsive";
             } else {
                 x.className = "rc_nav";
+            }
+        }
+
+        function alertAction() {
+            alert("Silahkan Login Atau Sign Up Terlebih Dahulu");
+        }
+
+        function validate() {
+            event.preventDefault();
+            console.log('tes');
+            var nama = document.forms["login"]["nama"].value;
+            var email = document.forms["login"]["email"].value;
+            var pass = document.forms["login"]["password"].value;
+        if (uname == "" || pass == "" || nama="") {
+            event.preventDefault();
+            alert('Data kosong\nmohon periksa kembali isian');
+            } else {
+            alert('Registrasi Berhasil');
             }
         }
     </script>
