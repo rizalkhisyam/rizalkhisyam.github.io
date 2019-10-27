@@ -40,9 +40,20 @@
             font-size: 28px;
             padding: 0px 10px;
         }
-        .sidenav p{
-        text-align: center;
-        color: #818181;
+
+        .sidenav p {
+            text-align: center;
+            color: #818181;
+        }
+
+        .btn-tambah{
+        background-color: gray;
+        width: 25%;
+        border: none;
+        color: white;
+        padding: 12px 16px;
+        font-size: 20px;
+        cursor: pointer;
         }
 
         @media screen and (max-height: 450px) {
@@ -53,7 +64,7 @@
             .sidenav a {
                 font-size: 18px;
             }
-            
+
         }
     </style>
 </head>
@@ -84,32 +95,19 @@
     </div>
 
     <div class="main">
-        <h2>Wellcome Admin</h2>
-        <hr>
-        <div class="person">
-            
-            <div class="ds">
-                <a href="">
-                    <img src="img/rizal.png" alt="">
-                </a>
-                <a href="" style="text-decoration: none;">
-                    <p style="color: #707070; font-size: 18px;">Rizal Khisyam</p>
-                    <p style="color:#BBB1B1; font-size: 14px; ">Admin 1</p>
-                </a>
-            </div>
-           
-            <div class="ds">
-                <a href="">
-                    <img src="img/ageng.png" alt="">
-                </a>
-                <a href="" style="text-decoration: none;">
-                    <p style="color: #707070; font-size: 18px;">Rahmad Ageng</p>
-                    <p style="color:#BBB1B1; font-size: 14px; ">Admin 2</p>
-                </a>
-            </div>
+        <h4>Product Anda</h4>
+        <button class="btn-tambah">Tambah Product +</button>
+        <br><br>
+        <table>
+            <tr>
+                <td>
+                    <img src="img/nike/nike1.png" alt="">
+                </td>
+                <td>
 
-        </div>
-        
+                </td>
+            </tr>
+        </table>
     </div>
 
 </body>
