@@ -56,6 +56,37 @@
         cursor: pointer;
         }
 
+        .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 168px;
+        text-align: center;
+        font-family: arial;
+        }
+
+        .price {
+        color: grey;
+        font-size: 22px;
+        }
+        
+        .prod td{
+            padding: 30px;
+        }
+
+        .card button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #000;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+        }
+
+        .card button:hover {
+        opacity: 0.7;
+        }
+
         @media screen and (max-height: 450px) {
             .sidenav {
                 padding-top: 15px;
@@ -98,13 +129,44 @@
         <h4>Product Anda</h4>
         <button class="btn-tambah">Tambah Product +</button>
         <br><br>
-        <table>
+        
+        <table class="prod">
             <tr>
                 <td>
-                    <img src="img/nike/nike1.png" alt="">
+                    <div class="card">
+                        <img src="img/nike/nike1.png" alt="Denim Jeans" style="width:100%">
+                        <h4>JoyRide</h4>
+                        <p class="price">IDR. 1.250.000</p>
+                        <p>Tersisa 20</p>
+                        <p><button>Edit</button></p>
+                    </div>
                 </td>
                 <td>
-
+                    <div class="card">
+                        <img src="img/nike/jordan4.png" alt="Denim Jeans" style="width:100%">
+                        <h4>Jordan</h4>
+                        <p class="price">IDR. 1.250.000</p>
+                        <p>Tersisa 20</p>
+                        <p><button>Edit</button></p>
+                    </div>
+                </td>
+                <td>
+                    <div class="card">
+                        <img src="img/jenie1.png" alt="Denim Jeans" style="width:100%">
+                        <h4>Daster</h4>
+                        <p class="price">IDR. 1.250.000</p>
+                        <p>Tersisa 20</p>
+                        <p><button>Edit</button></p>
+                    </div>
+                </td>
+                <td>
+                    <div class="card">
+                        <img src="img/jisoo1.png" alt="Denim Jeans" style="width:100%">
+                        <h4>Dress</h4>
+                        <p class="price">IDR. 1.250.000</p>
+                        <p>Tersisa 20</p>
+                        <p><button>Edit</button></p>
+                    </div>
                 </td>
             </tr>
         </table>
