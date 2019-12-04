@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/new_style.css">
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/single_style.css">
+    <link rel="stylesheet" href="css/modal.css">
     <title>HypeKoyang Store</title>
     <link rel="shortcut icon" href="img/Group 26.png">
 </head>
@@ -66,10 +67,11 @@
                 <button class="btn" style="background-color: gray;"><i class="fas fa-plus-circle"></i></button>
             </div>
             <div class="btn-group">
-                <button class="btn1" onclick="window.location.href = 'checkout.html';">Add To Cart</button>
+                <button class="btn1" id="btn-modal2" onclick="window.location.href = 'checkout.html';">Add To
+                    Cart</button>
             </div>
             <div class="btn-group2">
-                <button class="btn2">Add To Wishlist</button>
+                <button id="myBtn" class="btn2">Add To Wishlist</button>
             </div>
             <div class="line">
                 <img src="img/design1.PNG">
@@ -148,9 +150,40 @@
             <a href="">JOBS <font style="color:blue;">DEVELOPER</font> TERMS PRIVACY POLICY</a>
         </div>
     </div>
+<!-- Modal -->
+    <div id="myWis" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Berhasil Ditambahkan ke Wishlist</p>
+        </div>
 
+    </div>
+    
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <p>Ingin Melanjutkan ke Menu Pembayaran ?</p>
+            <button class="btn btn-success" >Ok</button>
+        </div>
+    </div>
 
-
+<!-- Script Modal -->
+<script>
+    var modal = document.getElementById("myWis");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+</script>
     <script>
         function myFunction() {
             var x = document.getElementById("centered_nav");
