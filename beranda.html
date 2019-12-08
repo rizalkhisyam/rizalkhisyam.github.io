@@ -140,14 +140,16 @@
             </div>
         </div>
     </div>
+    <div class="tambahan">
+        <a href="#!" class="btn-more">Tampilkan lebih Banyak</a>
+    </div>
 
-
-    <div class="designer" id="desain">
+<div class="designer" id="desain">
         <br>
         <p class="up">Designer</p>
         <div class="down">
         <p style="">Pakaian terbaik dari designer professional</p>
-    </div>
+        </div>
 
     <div class="person">
             <div class="ds">
@@ -186,9 +188,10 @@
                     <p style="color:#BBB1B1; font-size: 14px; ">Art Cloth</p>
                 </a>
             </div>
-
-        </div>
+            
     </div>
+</div>
+
 
     <div class="footer" id="about">
         <div class="ft-logo">
@@ -222,7 +225,7 @@
         </div>
     </div>
     
-
+    <script src="js/jQuery.js"></script>
     <script>
     function myFunction() {
         var x = document.getElementById("centered_nav");
@@ -232,6 +235,28 @@
         x.className = "rc_nav";
     }
     }
+    </script>
+    <!-- ajax product -->
+    <script>
+        $(".btn-more").click(function () {
+        $.getJSON('json/more-product.json', function (data) {
+            console.log( data );
+                $.each(data, function (n, elem) {
+                console.log('img '+elem['img']+' - name '+elem['name']+' - price '+elem['price'])
+                    $('.item-product').append(`
+                        <div class="product-1">
+                            <a href="detailproduk.html">
+                                <img src="`+elem['img']+`" alt="">
+                            </a>
+                            <a href="detailproduk.html" style="text-decoration: none;">
+                                <p style="color: #707070; font-size: 18px;">`+elem['name']+`</p>
+                                <p style="color:#BBB1B1; font-size: 14px; ">`+elem['price']+`</p>
+                            </a>
+                        </div>
+                    `);
+                });
+            });
+        });
     </script>
 
 </body>

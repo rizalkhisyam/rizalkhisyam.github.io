@@ -1,0 +1,32 @@
+[
+    {
+        "img"   : "img/mbak1.png",
+        "name"  : "Baju Syariah",
+        "price" : "Rp. 250.000"
+    },
+    {
+        "img": "img/nike/nike1.png",
+        "name": "Baju Syariah",
+        "price": "Rp. 250.000"
+    },
+    {
+        "img": "img/nike/nike3.png",
+        "name": "Baju Syariah",
+        "price": "Rp. 250.000"
+    },
+    {
+        "img": "img/nike/jordan4.png",
+        "name": "Baju Syariah",
+        "price": "Rp. 250.000"
+    },
+    {
+        "img": "img/nike/nike4.png",
+        "name": "Baju Syariah",
+        "price": "Rp. 250.000"
+    },
+    {
+        "img": "img/nike/jordan3.png",
+        "name": "Baju Syariah",
+        "price": "Rp. 250.000"
+    }
+]
