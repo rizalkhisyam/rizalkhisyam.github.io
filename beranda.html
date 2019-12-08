@@ -241,16 +241,16 @@
         $(".btn-more").click(function () {
         $.getJSON('json/more-product.json', function (data) {
             console.log( data );
-                $.each(data, function (n, elem) {
-                console.log('img '+elem['img']+' - name '+elem['name']+' - price '+elem['price'])
+                $.each(data, function (n, value) {
+                console.log('img '+value['img']+' - name '+value['name']+' - price '+value['price'])
                     $('.item-product').append(`
                         <div class="product-1">
                             <a href="detailproduk.html">
-                                <img src="`+elem['img']+`" alt="">
+                                <img src="`+value['img']+`" alt="">
                             </a>
                             <a href="detailproduk.html" style="text-decoration: none;">
-                                <p style="color: #707070; font-size: 18px;">`+elem['name']+`</p>
-                                <p style="color:#BBB1B1; font-size: 14px; ">`+elem['price']+`</p>
+                                <p style="color: #707070; font-size: 18px;">`+value['name']+`</p>
+                                <p style="color:#BBB1B1; font-size: 14px; ">`+value['price']+`</p>
                             </a>
                         </div>
                     `);
