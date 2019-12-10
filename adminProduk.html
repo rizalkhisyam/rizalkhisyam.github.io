@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/new_style.css">
     <link rel="stylesheet" href="css/single_style.css">
     <link rel="stylesheet" href="css/style_admin2.css">
+    <link rel="stylesheet" href="css/modal.css">
 </head>
 
 <body>
@@ -36,7 +37,7 @@
 
     <div class="main">
         <h4>Product Anda</h4>
-        <button class="btn-tambah">Tambah Product +</button>
+        <button class="btn-tambah" id="myBtn">Tambah Product +</button>
         <br><br>
         
         <table class="prod">
@@ -81,6 +82,67 @@
         </table>
     </div>
 
+    <div id="myWis" class="modal">
+        <div class="modal-content2">
+            <span class="close">&times;</span>
+            <br><br><br>
+            <form action="" class="form">
+            <label for="">Upload Gambar produk</label><br>
+            <input type="file"><br><br>
+            <label for="">Nama Produk</label><br>
+            <input type="text"><br><br>
+            <label for="">Harga Produk</label><br>
+            <input type="text"><br><br>
+            <label for="">Stok Produk</label><br>
+            <input type="text"><br><br>
+            <button class="btn-ok" id="btn-ok">SIMPAN</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="js/jQuery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#btn-ok').on('click',function () {
+                event.preventDefault();
+                $.getJSON('json/add-product.json', function (data) {
+                console.log( data );
+                $.each(data, function (n, value) {
+                console.log('img '+value['img']+' - name '+value['name']+' - price '+value['price'])
+                $('.prod').append(`
+                    <td>
+                        <div class="card">
+                            <img src="`+value['img']+`" alt="Denim Jeans" style="width:100%">
+                            <h4>`+value['name']+`</h4>
+                            <p class="price">`+value['price']+`</p>
+                            <p>Tersisa `+value['stok']+`</p>
+                            <p><button>Edit</button></p>
+                        </div>
+                    </td>
+                `);
+                });
+                });
+                modal.style.display = "none";
+            })
+        })
+    </script>
+    <script>
+        var modal = document.getElementById("myWis");
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 
 </html>

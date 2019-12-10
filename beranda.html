@@ -77,7 +77,7 @@
             <br>
             <p class="up">Spesial Promo</p>
             <div class="down">
-                <p style="" class="ab">Promo pakaian Terbaru dan keren</p>
+                <p class="ab">Promo pakaian Terbaru dan keren</p>
             </div>
 
     <div class="item-product">
@@ -140,7 +140,7 @@
             </div>
         </div>
     </div>
-    <div class="tambahan">
+    <div class="tambahan" >
         <a href="#!" class="btn-more">Tampilkan lebih Banyak</a>
     </div>
 
@@ -239,6 +239,7 @@
     <!-- ajax product -->
     <script>
         $(".btn-more").click(function () {
+            // $('#btn').css('display','none');
         $.getJSON('json/more-product.json', function (data) {
             console.log( data );
                 $.each(data, function (n, value) {
@@ -256,6 +257,7 @@
                     `);
                 });
             });
+            
         });
     </script>
 

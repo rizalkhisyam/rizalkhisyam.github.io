@@ -93,6 +93,9 @@ select {
     margin-right: 90px;
 }
 
+.wrapper{
+    display: none;
+}
 
 
 @media screen and (max-height: 450px) {

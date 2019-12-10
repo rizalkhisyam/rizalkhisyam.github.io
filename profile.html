@@ -58,10 +58,17 @@
 
         <div style="text-align: center;">
         <form id="form1" runat="server">
-            <img style="height: 100px; height: 100px; border-radius:100%;" id="img_upload" src="http://placehold.it/100x100"
+            <img type='file' style="height: 100px; height: 100px; border-radius:100%;" id="img_upload" src="http://placehold.it/100x100"
                 alt="your image" />
 
-            <input type='file' id="inputFile" / style="display: block;" >
+            <input type='file' id="inputFile" / style="display: none;" >
+
+            <!-- <button id="btnFile">
+                <img style="height: 100px; height: 100px; border-radius:100%;" src="http://placehold.it/100x100" alt="">
+            </button>
+            <div class="wrapper">
+                <input type="file" id="uploadfile"/>
+            </div> -->
             
         </form>
         </div>
@@ -125,6 +132,35 @@
 
     <script src="js/all.js"></script>
     <script src="js/jQuery.js"></script>
+    <!-- <script>
+        $("#btnFile").click(function () {
+                $("#uplodfile").click();
+            });
+            $("#uplodfile").change(function () {
+                });
+
+    </script> -->
+    <script>
+        $(document).ready(function () {
+            $('#img_upload').on('click',function () {
+                $("#inputFile").click();
+            });
+        });
+
+        
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#img_upload').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+            $("#inputFile").change(function () {
+                readURL(this);
+            });
+    </script>
     <script>
         function myFunction() {
             var x = document.getElementById("centered_nav");
@@ -134,23 +170,6 @@
                 x.className = "rc_nav";
             }
         }
-
-        function readURL(input) {
-        if (input.files && input.files[0]) {
-        var reader = new FileReader();
-
-        reader.onload = function (e) {
-        $('#img_upload').attr('src', e.target.result);
-        }
-
-        reader.readAsDataURL(input.files[0]);
-        }
-        }
-
-        $("#inputFile").change(function () {
-        readURL(this);
-        });
-
     </script>
     
 </body>
