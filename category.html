@@ -47,7 +47,7 @@
                 <p class="ab">Promo pakaian terbaru dan keren</p>
             </div>
 
-            <div class="item-product">
+            <div class="item-product" id="list_data" page="">
                 <div class="product-1">
                     <a href="detailproduk.html">
                         <img src="img/mbak1.png" alt="">
@@ -105,6 +105,9 @@
                     </a>
                 </div>
             </div>
+        </div>
+        <div>
+            <a href="#!" id="more_btn">More Product</a>
         </div>
     </div>
 
@@ -218,5 +221,50 @@
         </div>
     </div>
     <script src="js/jQuery.js"></script>
+    <script>
+        $("#more_btn").click(function () {
+            var halaman = $("#list_data").attr("page");
+            
+            if (halaman == "" || halaman == NaN) {
+                halaman = 1;
+            }
+            else {
+                halaman = Number(halaman);
+                halaman+=1;
+            }
+            console.log("hal "+halaman);
+            $("#list_data").attr("page", halaman);
+            if(halaman == 2){
+                $("#more_btn").hide();
+            }
+            var url = "json/more-product-"+halaman+".json"
+            $.ajax({
+                url: url,
+                type: 'GET',
+                dataType: 'json'
+            })
+            .done(function (prod) {
+                console.log("sukses");
+                var data = "";
+                $.each(prod, function (index, val) {
+                    data += `
+                        <div class="product-1">
+                            <a href="detailproduk.html">
+                                <img src="`+val['img']+`" alt="">
+                            </a>
+                            <a href="detailproduk.html" style="text-decoration: none;">
+                                <p style="color: #707070; font-size: 18px;">`+val['name']+`</p>
+                                <p style="color:#BBB1B1; font-size: 14px; ">`+val['price']+`</p>
+                            </a>
+                        </div>
+                    `;  
+                });
+                $("#list_data").append(data);
+            })
+            .fail(function () {
+                console.log("error");
+            })
+        });
+    </script>
 </body>
 </html>
