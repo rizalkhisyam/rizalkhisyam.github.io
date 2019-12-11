@@ -172,10 +172,16 @@
     var btn = document.getElementById("myBtn");
     var span = document.getElementsByClassName("close")[0];
     btn.onclick = function () {
+        modal.style.animationName = 'animasiShow';
         modal.style.display = "block";
     }
     span.onclick = function () {
+        modal.style.animationName = 'animasiHide';
         modal.style.display = "none";
+        setTimeOut(function () {
+            modal.style.animationName = 'animasiHide';
+            modal.style.display = "none";
+        },400);
     }
     window.onclick = function (event) {
         if (event.target == modal) {
